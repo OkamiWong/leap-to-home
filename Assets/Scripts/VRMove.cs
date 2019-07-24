@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.UI;
 
 public class VRMove : MonoBehaviour
 {
-	public Transform playerTransform;
+	public Rigidbody playerRigidbody;
 
 	public SteamVR_Action_Boolean spawn = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
+
+	public Image fuelImage;
+
+	public float fuel = 1f, fuelConsumingSpeed = 0.01f;
 
 	SteamVR_Behaviour_Pose trackedObj;
 
@@ -34,7 +39,23 @@ public class VRMove : MonoBehaviour
 
 		if (triggerPressed)
 		{
-			playerTransform.Translate(transform.forward);
+			if(fuel >= fuelConsumingSpeed)
+			{
+				fuel -= fuelConsumingSpeed;
+				playerRigidbody.AddForce(transform.forward * 10f, ForceMode.Acceleration);
+			}
 		}
+		else
+		{
+			if(fuel < 1f)
+			{
+				fuel += fuelConsumingSpeed;
+			}
+		}
+	}
+
+	private void Update()
+	{
+		fuelImage.fillAmount = fuel;
 	}
 }
