@@ -13,9 +13,16 @@ public class VRMove : MonoBehaviour
 
 	bool triggerPressed = false;
 
+    public AudioSource music;
+    public AudioClip fly;
+
+    
 	private void Awake()
 	{
 		trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
+        music = gameObject.AddComponent<AudioSource>();
+        music.playOnAwake = false;
+        fly = Resources.Load<AudioClip>("music/fly");
 	}
 
 	private void FixedUpdate()
@@ -35,6 +42,9 @@ public class VRMove : MonoBehaviour
 		if (triggerPressed)
 		{
 			playerTransform.Translate(transform.forward);
+            music.clip = fly;
+            music.Play();
 		}
 	}
 }
+
