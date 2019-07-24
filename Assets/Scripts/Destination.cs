@@ -5,15 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Destination : MonoBehaviour
 {
-	private void OnCollisionEnter(Collision collision)
+    public AudioSource crowd;
+    public AudioClip huanhu;
+
+    private void OnCollisionEnter(Collision collision)
 	{
 		StartCoroutine(LoadScene());
-	}
+        crowd = gameObject.AddComponent<AudioSource>();
+        crowd.playOnAwake = false;
+        huanhu = Resources.Load<AudioClip>("crowd/huanhu");
+    }
 
 	IEnumerator LoadScene()
 	{
 		yield return new WaitForSeconds(2f);
 
-		SceneManager.LoadScene(0);
-	}
+		
+        crowd.clip = huanhu;
+        crowd.Play();
+    }
 }
