@@ -18,11 +18,18 @@ public class VRMove : MonoBehaviour
 
 	SteamVR_Behaviour_Pose trackedObj;
 
+	AudioSource audioSource;
+
 	bool triggerPressed = false;
 
 	private void Awake()
 	{
 		trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
+	}
+
+	private void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void FixedUpdate()
@@ -32,6 +39,7 @@ public class VRMove : MonoBehaviour
 			Debug.Log("button pressed");
 			triggerPressed = true;
 			particles.SetActive(true);
+			audioSource.Play();
 		}
 
 		if (spawn.GetStateUp(trackedObj.inputSource))
@@ -39,6 +47,7 @@ public class VRMove : MonoBehaviour
 			Debug.Log("button released");
 			triggerPressed = false;
 			particles.SetActive(false);
+			audioSource.Stop();
 		}
 
 		if (triggerPressed)

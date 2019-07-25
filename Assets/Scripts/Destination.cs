@@ -13,7 +13,7 @@ public class Destination : MonoBehaviour
 	IEnumerator LoadScene()
 	{
 		yield return new WaitForSeconds(2f);
-
+		GetComponent<AudioSource>().Play();
 		SceneManager.LoadScene(0);
 	}
 }
