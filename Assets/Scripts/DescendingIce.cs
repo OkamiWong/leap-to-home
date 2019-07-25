@@ -11,11 +11,6 @@ public class DescendingIce : MonoBehaviour
 		StartCoroutine(Descend());
 	}
 
-	private void Start()
-	{
-		StartCoroutine(Descend());
-	}
-
 	IEnumerator Descend()
 	{
 		var speed = step1 / time;

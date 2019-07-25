@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Destination.cs" />
     <Compile Include="Assets\Scripts\MovingIce.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Stopper.cs" />
     <Compile Include="Assets\Scripts\VRMove.cs" />
     <Compile Include="Assets\Scripts\Water.cs" />
     <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />

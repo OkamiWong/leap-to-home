@@ -5,15 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Destination : MonoBehaviour
 {
+	public GameObject inGame,win;
+
 	private void OnCollisionEnter(Collision collision)
 	{
-		StartCoroutine(LoadScene());
+		StartCoroutine(Win());
 	}
 
-	IEnumerator LoadScene()
+	IEnumerator Win()
 	{
-		yield return new WaitForSeconds(2f);
-		GetComponent<AudioSource>().Play();
+		inGame.SetActive(false);
+		win.SetActive(true);
+		yield return new WaitForSeconds(3f);
+		VRMove.gameState = 0;
 		SceneManager.LoadScene(0);
 	}
 }

@@ -14,7 +14,11 @@ public class VRMove : MonoBehaviour
 
 	public GameObject particles;
 
+	public GameObject start, inGame;
+
 	public float fuel = 1f, fuelConsumingSpeed = 0.01f;
+
+	public static int gameState = 0;
 
 	SteamVR_Behaviour_Pose trackedObj;
 
@@ -37,17 +41,32 @@ public class VRMove : MonoBehaviour
 		if (spawn.GetStateDown(trackedObj.inputSource))
 		{
 			Debug.Log("button pressed");
-			triggerPressed = true;
-			particles.SetActive(true);
-			audioSource.Play();
+
+			if(gameState == 0)
+			{
+				gameState = 1;
+				start.SetActive(false);
+				inGame.SetActive(true);
+			}
+
+			else if(gameState == 1)
+			{
+				triggerPressed = true;
+				particles.SetActive(true);
+				audioSource.Play();
+			}
 		}
 
 		if (spawn.GetStateUp(trackedObj.inputSource))
 		{
 			Debug.Log("button released");
-			triggerPressed = false;
-			particles.SetActive(false);
-			audioSource.Stop();
+
+			if(gameState == 1)
+			{
+				triggerPressed = false;
+				particles.SetActive(false);
+				audioSource.Stop();
+			}
 		}
 
 		if (triggerPressed)
@@ -69,6 +88,7 @@ public class VRMove : MonoBehaviour
 
 	private void Update()
 	{
-		fuelImage.fillAmount = fuel;
+		if(gameState == 1)
+			fuelImage.fillAmount = fuel;
 	}
 }

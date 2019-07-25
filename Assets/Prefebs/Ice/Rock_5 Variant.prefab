@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step1: 1
   step2: 3
-  time: 1
+  time: 3
 --- !u!1001 &8814039321585874791
 PrefabInstance:
   m_ObjectHideFlags: 0

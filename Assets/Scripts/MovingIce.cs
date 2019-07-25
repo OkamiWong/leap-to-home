@@ -36,4 +36,16 @@ public class MovingIce : MonoBehaviour
 			timer = 0f;
 		}
 	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.rigidbody.tag != "Player") return;
+		collision.transform.parent = this.transform;
+	}
+
+	private void OnCollisionExit(Collision collision)
+	{
+		if (collision.rigidbody.tag != "Player") return;
+		collision.transform.parent = null;
+	}
 }
