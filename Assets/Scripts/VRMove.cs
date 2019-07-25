@@ -12,6 +12,8 @@ public class VRMove : MonoBehaviour
 
 	public Image fuelImage;
 
+	public GameObject particles;
+
 	public float fuel = 1f, fuelConsumingSpeed = 0.01f;
 
 	SteamVR_Behaviour_Pose trackedObj;
@@ -29,12 +31,14 @@ public class VRMove : MonoBehaviour
 		{
 			Debug.Log("button pressed");
 			triggerPressed = true;
+			particles.SetActive(true);
 		}
 
 		if (spawn.GetStateUp(trackedObj.inputSource))
 		{
 			Debug.Log("button released");
 			triggerPressed = false;
+			particles.SetActive(false);
 		}
 
 		if (triggerPressed)
