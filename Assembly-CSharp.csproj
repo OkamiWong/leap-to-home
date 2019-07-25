@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\Scripts\DescendingIce.cs" />
     <Compile Include="Assets\Scripts\Destination.cs" />
+    <Compile Include="Assets\Scripts\MovingIce.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\VRMove.cs" />
     <Compile Include="Assets\Scripts\Water.cs" />

@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 1419938465549361125}
   - component: {fileID: 1419938465549361124}
   - component: {fileID: 1419938465549361131}
-  - component: {fileID: 7418215223087845169}
   - component: {fileID: 1419938465549361130}
-  - component: {fileID: 3184175651947352452}
   m_Layer: 0
   m_Name: Ocean
   m_TagString: Water
@@ -84,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7418215223087845169
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419938465549361129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: ebfb4988eb16add4784122504f75fe2f, type: 2}
 --- !u!114 &1419938465549361130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,15 +99,3 @@ MonoBehaviour:
   waveFrequency: 0.5
   waveLength: 0.5
   waveOriginPosition: {x: 0, y: 0, z: 0}
---- !u!114 &3184175651947352452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419938465549361129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8f7e19a42dcf447b72d2ac223851e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
