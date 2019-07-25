@@ -70,6 +70,7 @@
     <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
     <None Include="Assets\SimpleSky\ReadMe.txt" />
     <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
+    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Code/Unity/leap-to-home/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
