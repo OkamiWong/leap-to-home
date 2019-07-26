@@ -73,39 +73,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9504}
+      Script: {instanceID: 9482}
     - Class: 114
-      Script: {instanceID: 9510}
+      Script: {instanceID: 9506}
     - Class: 114
-      Script: {instanceID: 9516}
+      Script: {instanceID: 9512}
     - Class: 114
-      Script: {instanceID: 9524}
+      Script: {instanceID: 9518}
     - Class: 114
-      Script: {instanceID: 9560}
+      Script: {instanceID: 9526}
     - Class: 114
       Script: {instanceID: 9562}
     - Class: 114
-      Script: {instanceID: 9618}
+      Script: {instanceID: 9564}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9620}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9856}
     - Class: 114
-      Script: {instanceID: 9942}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 10338}
+      Script: {instanceID: 9944}
     - Class: 114
-      Script: {instanceID: 10522}
+      Script: {instanceID: 10340}
     - Class: 114
       Script: {instanceID: 10524}
     - Class: 114
-      Script: {instanceID: 10538}
+      Script: {instanceID: 10526}
     - Class: 114
-      Script: {instanceID: 10780}
+      Script: {instanceID: 10540}
     - Class: 114
-      Script: {instanceID: 11070}
+      Script: {instanceID: 10782}
     - Class: 114
-      Script: {instanceID: 26162}
+      Script: {instanceID: 11072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,6 +265,12 @@ ScriptsOnlyBuild:
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.Extras
     className: SteamVR_LaserPointer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stopper
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -1561,13 +1567,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Stopper
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Code/Unity/leap-to-home-release/leap-to-home.exe
+  playerPath: C:/Users/eeilab/Desktop/leap-to-home-release/leap-to-home.exe
