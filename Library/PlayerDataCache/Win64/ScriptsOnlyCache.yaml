@@ -483,6 +483,18 @@ ScriptsOnlyBuild:
     className: Equippable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: 0a178a1c85198b9dad8fc799b8bfaa65
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem
@@ -1570,4 +1582,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/eeilab/Desktop/leap-to-home-release/leap-to-home.exe
+  playerPath: D:/Code/git/leap-to-home/__Final_Release/leap-to-home.exe
